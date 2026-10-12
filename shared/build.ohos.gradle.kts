@@ -138,3 +138,12 @@ fun getCommonCompilerArgs(): List<String> {
 fun getLinkerArgs(): List<String> {
   return listOf()
 }
+
+tasks.matching { it.name == "xcodeVersion" }.configureEach {
+  actions.clear()
+  doLast {
+    val xcodeVersionFile = layout.buildDirectory.file("xcode-version.txt").get().asFile
+    xcodeVersionFile.parentFile?.mkdirs()
+    xcodeVersionFile.writeText("16.0")
+  }
+}

@@ -10,5 +10,5 @@
 /.clang-tidy
 **/.test
 /.appanalyzer
-/entry/libs/arm64-v8a/libshared.so
-/entry/src/main/cpp/libshared_api.h
+/main/libs/arm64-v8a/libshared.so
+/main/src/main/cpp/libshared_api.h
